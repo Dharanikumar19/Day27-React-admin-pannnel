@@ -7,14 +7,12 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Userlist from "./Userlist";
-import Createuser from "./Createuser";
-import Edituser from "./Edituser";
-import Deleteuser from "./Deleteuser";
-import Product from "./Product";
-import CreateProduct from "./CreateProduct";
-import EditProduct from "./EditProduct";
-import DeleteProduct from "./DeleteProduct";
+import Userlist from "./UserComponents/Userlist";
+import Createuser from "./UserComponents/Createuser";
+import Edituser from "./UserComponents/Edituser";
+import Product from "./ProductComponents/Product";
+import CreateProduct from "./ProductComponents/CreateProduct";
+import EditProduct from "./ProductComponents/EditProduct";
 
 function App() {
   return (
@@ -31,11 +29,9 @@ function App() {
             <Route path="/users" element={<Userlist/>}></Route>
             <Route path="/products" element={<Product/>}></Route>
             <Route path="/createuser" element={<Createuser/>}></Route>
-            <Route path="/edituser" element={<Edituser/>}></Route>
-            <Route path="/deleteuser" element={<Deleteuser/>}></Route>
+            <Route path="/edituser/:id" element={<Edituser/>}></Route> 
             <Route path="/createproduct" element={<CreateProduct/>}></Route>
-            <Route path="/editproduct" element={<EditProduct/>}></Route>
-            <Route path="/deleteproduct" element={<DeleteProduct/>}></Route>
+            <Route path="/editproduct/:id" element={<EditProduct/>}></Route>
           </Routes>
         </div>
           </div>
